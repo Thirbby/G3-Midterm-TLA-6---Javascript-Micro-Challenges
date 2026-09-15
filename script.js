@@ -3,6 +3,13 @@ const loginForm = document.getElementById("loginForm");
 const usernameInput = document.getElementById("usernameInput");
 const passwordInput = document.getElementById("passwordInput");
 const feedbackBox = document.getElementById("loginFeedback");
+
+const passwordCounter = document.getElementById("pwCounter");
+
+passwordInput.addEventListener("input", function() {
+    passwordCounter.textContent = passwordInput.value.length;
+});
+
 // 2. Attach Form Submission Listener
 loginForm.addEventListener("submit", function(event) {
 // Prevent native HTTP page refresh
