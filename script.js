@@ -4,10 +4,10 @@ const usernameInput = document.getElementById("usernameInput");
 const passwordInput = document.getElementById("passwordInput");
 const feedbackBox = document.getElementById("loginFeedback");
 
-const passwordCounter = document.getElementById("pwCounter");
+const passwordCounter = document.getElementById("pwCounter"); // Grabs the <span id="pwCounter"> element from the HTML so we can control it in JS
 
-passwordInput.addEventListener("input", function() {
-    passwordCounter.textContent = passwordInput.value.length;
+passwordInput.addEventListener("input", function() { // ^ Tells the browser: "watch the password field, and run this code every time its value changes"
+    passwordCounter.textContent = passwordInput.value.length; // ^ Counts how many characters are currently in the password field, and displays that number inside the pwCounter span
 });
 
 // 2. Attach Form Submission Listener
